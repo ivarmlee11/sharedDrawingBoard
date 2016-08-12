@@ -5,10 +5,11 @@ var myColor3;
 var sizeSlider;
 
 function setup() {
-  socket = io.connect(process.env.PORT || 3000);
+  socket = io.connect('http://localhost:3000');
   bg = loadImage('images/gridBoard.png');
   socket.on('mouse', newDrawing);
   var cnv = createCanvas(1000, 740);
+
   rSlider = createSlider(0, 255, 0);
   rSlider.position(20, 20);
   gSlider = createSlider(0, 255, 0);
@@ -51,6 +52,8 @@ function mouseDragged() {
   fill(myColor1, myColor2, myColor3);
   ellipse(mouseX, mouseY, radius, radius);
 };
+
+
 
 function draw() {
   myColor1 = rSlider.value();
