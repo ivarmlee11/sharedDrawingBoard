@@ -2,3 +2,19 @@ body {
   padding: 0;
   margin: 0;
 };
+
+#red {
+  color: red;
+};
+
+#green {
+  color: green;
+};
+
+#blue {
+  color: blue;
+};
+
+#size {
+  color: black;
+};
