@@ -17,6 +17,7 @@ var currentDrawData = [];
 
 app.get('/', function(req, res) {
     console.log('hello');
+    console.log('hello');
     res.render('index.html');
 });
 
