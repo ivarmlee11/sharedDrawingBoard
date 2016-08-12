@@ -15,6 +15,11 @@ var io = socket(server);
 
 var currentDrawData = [];
 
+app.get('/', function(req, res) {
+    res.render('index.html');
+});
+
+
 var endConnection = function(socket) {
    console.log('Client has disconnected');
 };
