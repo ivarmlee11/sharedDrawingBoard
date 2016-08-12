@@ -16,6 +16,7 @@ var io = socket(server);
 var currentDrawData = [];
 
 app.get('/', function(req, res) {
+    console.log('hello');
     res.render('index.html');
 });
 
