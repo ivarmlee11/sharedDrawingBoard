@@ -3,13 +3,9 @@ var myColor1;
 var myColor2;
 var myColor3;
 var sizeSlider;
-// var PORT = process.env.PORT;
-// var server = app.listen(PORT || 3000, function() {
-//   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-// });
 
 function setup() {
-  socket = io.connect('http://gridmapdraw.herokuapp.com/');
+  socket = io.connect('https://gridmapdraw.herokuapp.com/');
   bg = loadImage('images/gridBoard.png');
   socket.on('mouse', newDrawing);
   var cnv = createCanvas(1000, 740);
