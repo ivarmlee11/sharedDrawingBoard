@@ -5,7 +5,7 @@ var myColor3;
 var sizeSlider;
 
 function setup() {
-  socket = io.connect('http://localhost:3000');
+  socket = io.connect('http://localhost:3000' || 'gridmapdraw.herokuapp.com');
   bg = loadImage('images/gridBoard.png');
   socket.on('mouse', newDrawing);
   var cnv = createCanvas(1000, 740);
