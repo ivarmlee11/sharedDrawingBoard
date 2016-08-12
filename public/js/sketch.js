@@ -5,7 +5,7 @@ var myColor3;
 var sizeSlider;
 
 function setup() {
-  socket = io.connect(PORT);
+  socket = io.connect('http://localhost:3000' || process.env.PORT);
   bg = loadImage('images/gridBoard.png');
   socket.on('mouse', newDrawing);
   var cnv = createCanvas(1000, 740);
