@@ -15,22 +15,21 @@ var socket = require('socket.io');
 
 var io = socket(server);
 
-var currentDrawData = [];
-
 app.get('/', function(req, res) {
-  console.log('hello');
-  console.log('hello');
   res.render('index.html');
 });
-
 
 var endConnection = function(socket) {
   console.log('Client has disconnected');
 };
 
+// on new connection send information to the client
 var newConnection = function(socket) {
   console.log(socket.id + ' is connected');
   socket.on('mouse', mouseMsg);
+
+  // the information sent will be the data object
+  // it will be sent to all currently connected players
 
   function mouseMsg(data) {
     socket.broadcast.emit('mouse', data);
